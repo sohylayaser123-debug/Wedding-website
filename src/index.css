@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Jost', sans-serif;
+
+  --color-pearl-base: #fbf9f5;
+  --color-pearl-card: #f7f3ec;
+  --color-pearl-accent: #e8ded2;
+  --color-gold-light: #dfc888;
+  --color-gold-main: #c6a258;
+  --color-gold-dark: #8c6e2d;
+  --color-burgundy: #5c2028;
+  --color-charcoal: #2c2523;
+  --color-warm-gray: #6e645e;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+.pearl-gradient {
+  background: linear-gradient(135deg, #fbf9f5 0%, #f4ede2 50%, #fbf9f5 100%);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #a88438 0%, #d4af37 50%, #8c6e2d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(to right, #d4af37, #f3e5ab, #d4af37) 1;
+}
